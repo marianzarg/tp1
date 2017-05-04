@@ -1,7 +1,0 @@
-C:\Users\maria\documents\visual studio 2015\Projects\TP1\Repositorio\bin\Debug\Repositorio.dll
-C:\Users\maria\documents\visual studio 2015\Projects\TP1\Repositorio\bin\Debug\Repositorio.pdb
-C:\Users\maria\documents\visual studio 2015\Projects\TP1\Repositorio\bin\Debug\Dominio.dll
-C:\Users\maria\documents\visual studio 2015\Projects\TP1\Repositorio\bin\Debug\Dominio.pdb
-C:\Users\maria\documents\visual studio 2015\Projects\TP1\Repositorio\obj\Debug\Repositorio.csprojResolveAssemblyReference.cache
-C:\Users\maria\documents\visual studio 2015\Projects\TP1\Repositorio\obj\Debug\Repositorio.dll
-C:\Users\maria\documents\visual studio 2015\Projects\TP1\Repositorio\obj\Debug\Repositorio.pdb

@@ -1,5 +1,0 @@
-C:\Users\maria\documents\visual studio 2015\Projects\TP1\Dominio\bin\Debug\Dominio.dll
-C:\Users\maria\documents\visual studio 2015\Projects\TP1\Dominio\bin\Debug\Dominio.pdb
-C:\Users\maria\documents\visual studio 2015\Projects\TP1\Dominio\obj\Debug\Dominio.csprojResolveAssemblyReference.cache
-C:\Users\maria\documents\visual studio 2015\Projects\TP1\Dominio\obj\Debug\Dominio.dll
-C:\Users\maria\documents\visual studio 2015\Projects\TP1\Dominio\obj\Debug\Dominio.pdb

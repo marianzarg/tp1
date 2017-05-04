@@ -1,9 +1,0 @@
-C:\Users\maria\documents\visual studio 2015\Projects\TP1\Negocio\bin\Debug\Negocio.dll
-C:\Users\maria\documents\visual studio 2015\Projects\TP1\Negocio\bin\Debug\Negocio.pdb
-C:\Users\maria\documents\visual studio 2015\Projects\TP1\Negocio\bin\Debug\Dominio.dll
-C:\Users\maria\documents\visual studio 2015\Projects\TP1\Negocio\bin\Debug\Repositorio.dll
-C:\Users\maria\documents\visual studio 2015\Projects\TP1\Negocio\bin\Debug\Dominio.pdb
-C:\Users\maria\documents\visual studio 2015\Projects\TP1\Negocio\bin\Debug\Repositorio.pdb
-C:\Users\maria\documents\visual studio 2015\Projects\TP1\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
-C:\Users\maria\documents\visual studio 2015\Projects\TP1\Negocio\obj\Debug\Negocio.dll
-C:\Users\maria\documents\visual studio 2015\Projects\TP1\Negocio\obj\Debug\Negocio.pdb
