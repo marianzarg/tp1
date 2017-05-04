@@ -24,6 +24,23 @@ namespace Repositorio
             conexion.Open();
 
             string query = "select * from pacientes where idPacientes='" + index + "'";
+            //string query = "select * from turnosMedicos inner join pacientes on pacientes.idPacientes = turnosMedicos.personaId where idTurnos='" + index + "'";
+
+            SqlCommand cmd = new SqlCommand(query, conexion);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            conexion.Close();
+
+            return dt;
+        }
+
+        public DataTable LlenarCamposTurno(int index)
+        {
+            DataTable dt = new DataTable();
+            conexion.ConnectionString = datosConexion;
+            conexion.Open();
+
+            string query = "select * from turnosMedicos inner join pacientes on pacientes.idPacientes = turnosMedicos.personaId where idTurnos='" + index + "'";
 
             SqlCommand cmd = new SqlCommand(query, conexion);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -73,7 +90,7 @@ namespace Repositorio
 
             conexion.Open();
 
-            string query = "select * from pacientes inner join turnosMedicos on turnosMedicos.personaId = pacientes.idPacientes";
+            string query = "select * from pacientes inner join turnosMedicos on turnosMedicos.personaId = pacientes.idPacientes where turnoActivo='1'";
 
             SqlCommand cmd = new SqlCommand(query, conexion);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -81,6 +98,20 @@ namespace Repositorio
             conexion.Close();
 
             return dt;
+        }
+
+        public void BajaTurno(int index)
+        {
+            conexion.ConnectionString = datosConexion;
+            conexion.Open();
+
+
+            string qy = "update turnosMedicos set turnoActivo='0' where idTurnos='" + index + "'";
+
+            SqlCommand cmd = new SqlCommand(qy, conexion);
+            cmd.ExecuteNonQuery(); //Si falla, hace rollback
+
+            conexion.Close();
         }
     }
 }

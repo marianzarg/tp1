@@ -12,11 +12,9 @@ namespace Presentacion
     public partial class ModificarPaciente : System.Web.UI.Page
     {
 
-        
+
         PacienteNego pacienteNego = new PacienteNego();
         TurnosNego turnoNego = new TurnosNego();
-
-
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -42,8 +40,9 @@ namespace Presentacion
             paciente.Telefono = int.Parse(txtTelefono.Text);
             paciente.Direccion = txtDireccion.Text;
 
-
             pacienteNego.ModificarPaciente(paciente, index);
+            Response.Redirect("AltaPersona.aspx", true);
+
         }
     }
 }

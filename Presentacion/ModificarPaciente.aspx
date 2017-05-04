@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="ModificarPaciente.aspx.cs" Inherits="Presentacion.ModificarPaciente" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -33,12 +34,12 @@
 
                 <div class="form-group">
                 </div>
-
+                
                 <div class="form-group">
                     <div class="col-md-4">
                     </div>
                     <div class="col-md-4">
-                        <asp:Button ID="btnModificarPaciente" runat="server" Text="Modificar" class="btn btn-primary" OnClick="btnModificarPaciente_Click"/>
+                        <asp:Button ID="btnModificarPaciente" runat="server" Text="Modificar" class="btn btn-primary" OnClick="btnModificarPaciente_Click" />
                     </div>
                     <div class="col-md-4">
                     </div>

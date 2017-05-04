@@ -24,6 +24,7 @@ namespace Presentacion
             if (IsPostBack) return;
             CargarGrilla();
             CargarDropdown();
+            txtFechaTurno.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
 
         private void CargarGrilla()
@@ -68,6 +69,23 @@ namespace Presentacion
             turnoNego.AsignarTurno(turno, index);
             CargarGrilla();
             CargarDropdown();
+        }
+
+        protected void gdvTurnos_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "editar")
+            {
+                int index = int.Parse(e.CommandArgument.ToString());
+                Response.Redirect("ModificarTurno.aspx?idTurnos=" + index, true);
+            }
+
+            if (e.CommandName == "eliminar")
+            {
+                int index = int.Parse(e.CommandArgument.ToString());
+                turnoNego.BajaTurno(index);
+                CargarGrilla();
+            }
+
         }
 
     }

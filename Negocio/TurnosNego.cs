@@ -29,9 +29,19 @@ namespace Negocio
             turnosRepo.AsignarTurnos(turno, index);
         }
 
+        public void BajaTurno(int index)
+        {
+            turnosRepo.BajaTurno(index);
+        }
+
         public DataTable cargarDropdown()
         {
             return turnosRepo.CargarDropdown();
+        }
+
+        public DataTable LlenarCamposTurno(int index)
+        {
+            return turnosRepo.LlenarCamposTurno(index);
         }
     }
 }

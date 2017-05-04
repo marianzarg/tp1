@@ -14,7 +14,7 @@ namespace Presentacion
     {
         PacienteNego pacienteNego = new PacienteNego();
         Cliente paciente = new Cliente();
-        
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -43,7 +43,7 @@ namespace Presentacion
             paciente.Direccion = txtDireccion.Text;
 
             pacienteNego.GuardarPaciente(paciente);
-            
+
         }
 
         protected void borrar(object sender, ImageClickEventArgs e)
@@ -58,6 +58,14 @@ namespace Presentacion
                 int index = int.Parse(e.CommandArgument.ToString());
                 Response.Redirect("ModificarPaciente.aspx?idPacientes=" + index, true);
             }
+
+            if (e.CommandName == "eliminar")
+            {
+                int index = int.Parse(e.CommandArgument.ToString());
+                pacienteNego.borrarPersona(index);
+                CargarGrilla();
+            }
+
         }
     }
 }

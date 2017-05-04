@@ -59,6 +59,7 @@
                     <asp:TemplateField HeaderText="Opciones">
                         <ItemTemplate>
                             <asp:ImageButton runat="server" ImageUrl="~/img/edit.png" CommandName="editar" CommandArgument='<%#Eval("idPacientes")%>' />
+                            <asp:LinkButton runat="server" CommandName="eliminar" CommandArgument='<%#Eval("idPacientes")%>'><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></asp:LinkButton>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

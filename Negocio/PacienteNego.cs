@@ -31,5 +31,10 @@ namespace Negocio
         {
             pacienteRepo.ModificarPaciente(paciente, index);
         }
+
+        public void borrarPersona(int index)
+        {
+            pacienteRepo.borrarPersona(index);
+        }
     }
 }

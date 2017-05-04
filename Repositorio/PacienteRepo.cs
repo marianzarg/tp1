@@ -27,6 +27,18 @@ namespace Repositorio
             conexion.Close();
         }
 
+        public void borrarPersona(int index)
+        {
+            conexion.ConnectionString = datosConexion;
+            conexion.Open();
+            string qy = "update pacientes set activo='0' where idPacientes='" + index + "'";
+
+            SqlCommand cmd = new SqlCommand(qy, conexion);
+            cmd.ExecuteNonQuery(); //Si falla, hace rollback
+
+            conexion.Close();
+        }
+
         public void GuardarPaciente(Cliente paciente)
         {
             conexion.ConnectionString = datosConexion;

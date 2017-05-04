@@ -12,7 +12,7 @@
             <div class="panel-body">
 
                 <div class="form-group">
-                    <asp:DropDownList ID="ddId" runat="server"  CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddId_SelectedIndexChanged">
+                    <asp:DropDownList ID="ddId" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddId_SelectedIndexChanged">
                         <asp:ListItem Selected="True"></asp:ListItem>
                         <asp:ListItem />
 
@@ -88,7 +88,7 @@
             </div>
         </div>
         <div class="form-group">
-            <asp:GridView ID="gdvTurnos" runat="server" CssClass="table table-striped" AutoGenerateColumns="false">
+            <asp:GridView ID="gdvTurnos" runat="server" CssClass="table table-striped" AutoGenerateColumns="false" OnRowCommand="gdvTurnos_RowCommand">
 
                 <Columns>
 
@@ -96,9 +96,15 @@
                     <asp:BoundField HeaderText="Nombre Paciente" DataField="nombre" />
                     <asp:BoundField HeaderText="Apellido Paciente" DataField="apellido" />
                     <asp:BoundField HeaderText="Fecha Turno" DataField="fechaTurno" />
-                    <asp:BoundField HeaderText="Fecha Asignación Turno" DataField="fechaRegistro" />
+                    <%--<asp:BoundField HeaderText="Fecha Asignación Turno" DataField="fechaRegistro" />--%>
                     <asp:BoundField HeaderText="Motivo" DataField="motivoTurno" />
                     <asp:BoundField HeaderText="Descripción" DataField="descripcion" />
+                    <asp:TemplateField HeaderText="Opciones">
+                        <ItemTemplate>
+                            <asp:ImageButton runat="server" ImageUrl="~/img/edit.png" CommandName="editar" CommandArgument='<%#Eval("idTurnos")%>' />
+                            <asp:LinkButton runat="server" CommandName="eliminar" CommandArgument='<%#Eval("idTurnos")%>'><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></asp:LinkButton>
+                        </ItemTemplate>
+                    </asp:TemplateField>
 
                 </Columns>
 
